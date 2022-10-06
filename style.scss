@@ -33,9 +33,12 @@ a {
   color: $primary;
 
   &--about {
-    background-image: url(./img/niko/IMG_8688.jpg);
-    background-size: cover;
+    background-image: url(./img/niko/IMG_8688.png);
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    backdrop-filter: brightness(80%);
 
     .top-navigation {
       box-shadow: 0px 8px 6px -6px white;
@@ -138,14 +141,15 @@ a {
   }
 
   .meta {
-    width: 150px;
+    width: 25%;
     margin: 30px 10px;
-    margin-left: calc(50% - 0.5 * 160px);
     display: block;
+    margin-left: 60%;
   }
 
   &__bio {
     padding: 10px 10px 30px 10px;
+    text-align: justify;
   }
 
   &__brand:hover {
@@ -164,10 +168,11 @@ a {
     letter-spacing: 7px;
     font-size: 0.9em;
     font-weight: 100;
+    padding-left: 10px;
   }
 
   &__media-container {
-    padding: 20px;
+    padding: 20px 10px;
   }
 
   &__media-link {
@@ -187,6 +192,7 @@ a {
       color: #c13584;
     }
   }
+
   &__email {
     padding: 10px;
   }
@@ -198,6 +204,7 @@ a {
       padding: 10px;
     }
   }
+
   &__copyright {
     .copyright {
       text-align: center;
@@ -208,4 +215,146 @@ a {
 .container {
   background-color: inherit;
   padding-bottom: 10px;
+  width: 100%;
+}
+
+@media only screen and (min-width: "400px") {
+  .footer {
+    background-position-x: right;
+    background-size: 500px;
+    background-repeat: no-repeat;
+  }
+}
+
+@media only screen and (min-width: "490px") {
+  .main-content__brand {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media only screen and (min-width: "650px") {
+  .title {
+    font-size: 2.5em;
+  }
+  .main-content__brand {
+    width: 250px;
+    height: 250px;
+
+    &__img {
+      width: 200px;
+    }
+  }
+}
+
+@media only screen and (min-width: "700px") {
+  .title {
+    font-size: 2.5em;
+  }
+  .main-content {
+    &__bio {
+      font-size: 1.4em;
+    }
+    &__brand {
+      width: 250px;
+      height: 250px;
+      margin: 30px 10px;
+    }
+  }
+}
+
+@media only screen and (min-width: "800px") {
+  .title {
+    font-size: 3em;
+  }
+  .main-content__brand {
+    width: 270px;
+    height: 270px;
+    margin: 30px 15px;
+  }
+}
+
+@media only screen and (min-width: "900px") {
+  .title {
+    font-size: 3em;
+  }
+  .main-content__brand {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width: "1000px") {
+  .main-content__brand {
+    margin: 30px 35px;
+
+    &__img {
+      width: 200px;
+    }
+  }
+  .footer {
+    background-size: 600px;
+  }
+}
+
+@media only screen and (min-width: "1100px") {
+  .main-content {
+    padding: 0px 50px;
+
+    .meta {
+      width: 20%;
+      margin-top: 70px;
+      margin-bottom: 70px;
+    }
+
+    &__brand {
+      width: 300px;
+      height: 300px;
+      margin: 60px 50px;
+
+      &__img {
+        width: 250px;
+      }
+
+      &__bio {
+        font-size: 1.5em;
+      }
+    }
+  }
+  .top-navigation {
+    &__img {
+      height: 75px;
+      margin-right: 20px;
+    }
+
+    &__anchor-about,
+    &__name {
+      font-size: 1.1em;
+    }
+  }
+  .footer {
+    font-size: 1.2em;
+  }
+}
+@media only screen and (min-width: "1400px") {
+  .main-content__brand {
+    width: 400px;
+    height: 400px;
+    margin: 60px 50px;
+  }
+  .footer {
+    padding-left: 30px;
+
+    .container {
+      padding-bottom: 30px;
+    }
+  }
+}
+
+@media only screen and (min-width: "1800px") {
+  .main-content__brand {
+    width: 500px;
+    height: 500px;
+    margin: 80px 80px;
+  }
 }
