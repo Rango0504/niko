@@ -1,4 +1,4 @@
-const body = document.querySelector(".body--about");
+const body = document.querySelector(".main-content--about");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 100) {

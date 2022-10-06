@@ -1,15 +1,12 @@
 const body = document.querySelector(".body");
 const logoImg = document.querySelector(".top-navigation__img");
-const title = document.querySelector(".main-content__title--index");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 100) {
-    body.classList.add("backgroundBlack");
+    body.classList.add("backgroundWhite");
     logoImg.classList.add("invert");
-    title.classList.add("bgBlur");
   } else if (window.scrollY < 100) {
-    body.classList.remove("backgroundBlack");
+    body.classList.remove("backgroundWhite");
     logoImg.classList.remove("invert");
-    title.classList.remove("bgBlur");
   }
 });
