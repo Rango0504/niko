@@ -1,0 +1,199 @@
+@font-face {
+  font-family: "Sequel";
+  src: url(./fonts/Sequel100Black-85.ttf);
+}
+
+@font-face {
+  font-family: "Tungsten";
+  src: url(./fonts/tungsten-medium_bigfontsite.com.otf);
+}
+
+$primary: white;
+$secondary: black;
+
+* {
+  font-family: "Sequel";
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.invert {
+  filter: invert(1);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.body {
+  transition: all 0.5s linear;
+  background-color: $secondary;
+  color: $primary;
+
+  &--about {
+    background-image: url(./img/niko/IMG_8688.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+.brightness {
+  backdrop-filter: brightness(50%);
+}
+
+.backgroundBlack {
+  background-color: $primary;
+  color: $secondary;
+}
+.bgWhite {
+  background-color: white;
+  background-image: none !important;
+}
+.bgBlur {
+}
+
+.top-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  color: inherit;
+
+  &__name {
+    font-size: 0.8em;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+
+  &__img {
+    margin-right: 5px;
+    height: 50px;
+    transition: 0.5s linear;
+  }
+
+  &__anchor-about {
+    font-family: "Tungsten";
+    letter-spacing: 7px;
+    font-size: 0.9em;
+    font-weight: 900;
+    margin: 10px;
+  }
+}
+.title {
+  line-height: 0.9;
+  padding-left: 10px;
+  font-size: 1.8em;
+  color: inherit;
+
+  &--about {
+    font-size: 1.8em;
+    line-height: 0.9;
+  }
+}
+
+.small-top {
+  font-size: 0.5em;
+  vertical-align: text-top;
+}
+
+.main-content {
+  &__title {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    // &--index {
+    //   background-image: url(./img/niko/IMG_8685.png);
+    //   background-size: cover;
+    // }
+  }
+
+  &__brands {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    padding: 20px 5px;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: grayscale(1);
+    margin: 10px 0;
+    background-color: rgb(186, 186, 186);
+    width: 160px;
+    height: 160px;
+
+    &__img {
+      width: 120px;
+    }
+  }
+
+  .meta {
+    width: 150px;
+    margin: 30px 10px;
+    margin-left: calc(50% - 0.5 * 160px);
+    display: block;
+  }
+
+  &__bio {
+    padding: 10px 10px 30px 10px;
+  }
+
+  &__brand:hover {
+    filter: none;
+  }
+}
+
+.footer {
+  background-image: url(./img/niko/Zdjecie\ -\ strona\ dol.png);
+  background-size: cover;
+
+  &__text {
+    font-family: "Tungsten";
+    letter-spacing: 7px;
+    font-size: 0.9em;
+    font-weight: 100;
+    margin: 10px;
+  }
+
+  &__media-container {
+    padding: 20px;
+  }
+
+  &__media-link {
+    margin-right: 20px;
+    font-size: 1.5em;
+
+    &--fb::after {
+      content: ".";
+      color: #4267b2;
+    }
+    &--ln::after {
+      content: ".";
+      color: #0a66c2;
+    }
+    &--ig::after {
+      content: ".";
+      color: #c13584;
+    }
+  }
+  &__email {
+    padding: 10px;
+  }
+}
+
+.back-to-top {
+  padding: 100px 20px;
+  color: inherit;
+}
